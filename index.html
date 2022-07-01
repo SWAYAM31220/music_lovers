@@ -19,23 +19,30 @@
     <link rel="stylesheet" href="./styles/common.css" />
     <link rel="stylesheet" href="./styles/index.css" />
     <link rel="stylesheet" href="./styles/navbar.css" />
+    
+    
     <title>MUSIC LOVERS</title>
   </head>
+ <style>
+  .im{
+    filter: brightness(150%);
+  }
+ </style>
   <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    
     <section class="home-main">
+      <video autoplay muted loop play-inlinks id="myVideo">
+        <source src="sb.mp4" type="video/mp4">
+      </video>
       <nav>
         <div class="brand">
-          <img src="./images/lala.png" alt="hosting" />
+          <img src="./images/lala.png" alt="hosting" class="im"/>
           <a href="/">MUSIC LOVERS</a>
         </div>
 
-        <i class="fa fa-bars" aria-hidden="true"></i>
+     
 
-        <ul>
-          <i class="fa fa-times" aria-hidden="true"></i>
-          <li><a href="/">Home</a></li>
-        </ul>
-      </nav>
 
       <div class="main-content">
         <h1>JOIN THE LISTENING PARTY</h1>
@@ -52,12 +59,7 @@
       <center>
         <br />
         <li>
-          <a
-            href="./Artists/AP_Dhillon.html"
-            class="links"
-            style="text-decoration: none"
-            >AP Dhillon</a
-          >
+          <a href="./Artists/AP_Dhillon.html" class="links">AP Dhillon</a>
         </li>
       </center>
       <center>
