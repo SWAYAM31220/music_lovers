@@ -31,13 +31,19 @@
   color: #fff;
   position: absolute;
 }
+#link-main{
+  text-align: center;
+}
+.links1{
+  text-align: center;
+}
 .waviy {
   position: absolute;
   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 75%;
-  font-size: 3rem;
+  font-size: 1px;
 }
 .waviy span {
   position: relative;
@@ -92,17 +98,42 @@
 .links{
   font-family: 'Barlow', sans-serif;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 3px;
     color: rgba(255, 137, 137, 0.829);
     text-decoration: none;
+    padding: 5px;
+    transition: .3s ease;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    line-height: 3;
 }
-.links:hover{
-  color: #3b74bbc9;
-  text-decoration: underline #4162cf;
-  transition: 0.3s ease-in-out;
+#links1 {
   
+  text-align: center;
+}
+
+.links:hover{
+ 
+  color: #58a3ff;
+  
+}
+.links::after{
+  content: '';
+    width: 100%;
+    height: 3px;
+    background: #58a3ff;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: .3s ease-in-out;
+}
+.links:hover::after{
+  transform: scaleX(1);
 }
 .link-main{
   background-color: #1f2029; 
@@ -142,7 +173,15 @@
   .main-content h1 {
     font-size: 2.25rem;
   }
-
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    text-transform: uppercase;
+    animation: flip 2.5s ;
+    animation-delay: calc(.1s * var(--i))
+  }
   .main-content p {
     font-size: 1rem;
   }
@@ -263,6 +302,9 @@
     .about-companies h1{
         font-size: 1.5rem;
     }
+    .waviy{
+      font-size: 0.5rem;
+    }
 }
 
 @media screen and (max-width:600px) {
@@ -272,6 +314,9 @@
 
     .about-companies .company-logos{
         font-size: 1rem;
+    }
+    .waviy{
+      font-size: 0.5rem;
     }
 }
 
