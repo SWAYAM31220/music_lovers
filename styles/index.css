@@ -1,4 +1,3 @@
-
 .home-main {
   
   min-height: 100vh;
@@ -32,7 +31,34 @@
   color: #fff;
   position: absolute;
 }
-
+.waviy {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  font-size: 3rem;
+}
+.waviy span {
+  position: relative;
+  display: inline-block;
+  font-size: 3rem;
+  color: #fff;
+  text-transform: uppercase;
+  animation: flip 2.5s ;
+  animation-delay: calc(.1s * var(--i))
+}
+@keyframes flip {
+  0%,80% {
+    transform: rotateY(360deg) 
+  }
+}
+.nn{
+  border-color: hsl(213, 100%, 78%);
+  width: auto;
+  height: 1px;
+  background-color: #f64;
+}
 .main-content {
   color: #fff;
   position: absolute;
@@ -52,18 +78,30 @@
   margin: 0.5rem 0;
 }
 .naam{
-  font-size: 2rem;
-  font-weight: bold;
- 
+  display: block;
+  	font-size: 26px;
+  	font-weight: 400;
+  	letter-spacing: 5px;
+ color-scheme: light;
+ color: rgb(194, 250, 233);
+
+}
+#links1{
+  height: 1000px;
 }
 .links{
-  align-items: center;
-  color: red;
-  text-decoration: none;
+  font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: rgba(255, 137, 137, 0.829);
+    text-decoration: none;
 }
 .links:hover{
   color: #3b74bbc9;
   text-decoration: underline #4162cf;
+  transition: 0.3s ease-in-out;
   
 }
 .link-main{
