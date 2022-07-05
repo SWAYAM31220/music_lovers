@@ -1,10 +1,72 @@
-
 .home-main {
-  background: url("../images/11.jpg") no-repeat;
-  background-size:cover;
+  
   min-height: 100vh;
 }
+#myVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
 
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+.brand{
+  color: #fff;
+  position: absolute;
+}
+#link-main{
+  text-align: center;
+}
+.links1{
+  text-align: center;
+}
+.waviy {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  font-size: 1px;
+  
+}
+.waviy span {
+  position: relative;
+  display: inline-block;
+  font-size: 3rem;
+  color: #fff;
+  text-transform: uppercase;
+  animation: flip 2.5s ;
+  animation-delay: calc(.1s * var(--i))
+   
+}
+@keyframes flip {
+  0%,80% {
+    transform: rotateY(360deg) 
+  }
+}
+.nn{
+  border-color: hsl(213, 100%, 78%);
+  width: auto;
+  height: 1px;
+  background-color: #f64;
+}
 .main-content {
   color: #fff;
   position: absolute;
@@ -16,6 +78,7 @@
 
 .main-content h1 {
   font-size: 3rem;
+  color: #fff;
 }
 
 .main-content p {
@@ -23,19 +86,61 @@
   margin: 0.5rem 0;
 }
 .naam{
-  font-size: 2rem;
-  font-weight: bold;
+  display: block;
+  	font-size: 26px;
+  	font-weight: 400;
+  	letter-spacing: 5px;
+ color-scheme: light;
+ color: rgb(194, 250, 233);
+
+}
+#links1{
+  height: 1000px;
 }
 .links{
-  align-items: center;
-  color: red;
-  text-decoration: none;
+  font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: rgba(255, 137, 137, 0.829);
+    text-decoration: none;
+    padding: 5px;
+    transition: .3s ease;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    line-height: 3;
 }
+#links1 {
+  
+  text-align: center;
+}
+
 .links:hover{
-  color: #3b74bbc9;
-  text-decoration: underline #4162cf;
+ 
+  color: #58a3ff;
   
 }
+.links::after{
+  content: '';
+    width: 100%;
+    height: 3px;
+    background: #58a3ff;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: .3s ease-in-out;
+}
+.links:hover::after{
+  transform: scaleX(1);
+}
+.link-main{
+  background-color: #1f2029; 
+}
+
 .gradient-btn {
   display: grid;
   place-items: center;
@@ -68,9 +173,9 @@
 
 @media screen and (max-width: 600px) {
   .main-content h1 {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
   }
-
+  
   .main-content p {
     font-size: 1rem;
   }
@@ -187,12 +292,54 @@
     color: #000;
 }
 
-@media screen and (max-width:750px) {
+@media screen and (max-width:900px) {
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    animation: flip 2.5s ;
+    animation-delay: calc(.1s * var(--i))
+  }
+}
+@media screen and (max-width:800px) {
     .about-companies h1{
         font-size: 1.5rem;
     }
+    .waviy span {
+      position: relative;
+      display: inline-block;
+      font-size: 35px;
+      color: #fff;
+      text-transform: uppercase;
+      animation: flip 2.5s ;
+      animation-delay: calc(.1s * var(--i))
+    }
 }
 
+@media screen and (max-width:750px) {
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    animation: flip 2.5s ;
+    animation-delay: calc(.1s * var(--i))
+  }
+}
+@media screen and (max-width:500px) {
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 1.2rem;
+    color: #fff;
+    text-transform: uppercase;
+    animation: flip 2.5s ;
+    animation-delay: calc(.1s * var(--i))
+  }
+}
 @media screen and (max-width:600px) {
     .about-companies h1{
         font-size: 1.2rem;
@@ -200,6 +347,37 @@
 
     .about-companies .company-logos{
         font-size: 1rem;
+    }
+    .links{
+      font-size: 15px;
+    }
+    .naam{
+      font-size: large;
+    }
+    #myBtn {
+      display: none; /* Hidden by default */
+      position: fixed; /* Fixed/sticky position */
+      bottom: 20px; /* Place the button at the bottom of the page */
+      right: 30px; /* Place the button 30px from the right */
+      z-index: 99; /* Make sure it does not overlap */
+      border: none; /* Remove borders */
+      outline: none; /* Remove outline */
+      
+      color: white; /* Text color */
+      cursor: pointer; /* Add a mouse pointer on hover */
+      padding: 12px; /* Some padding */
+      border-radius: 12px; /* Rounded corners */
+      font-size: 15px; /* Increase font size */
+      background-image: linear-gradient(
+    to right,
+    #4162cf 0%,
+    #0072ff 51%,
+    #4162cf 100%
+  );
+    }
+    
+    #myBtn:hover {
+      background-color: #555; /* Add a dark-grey background on hover */
     }
 }
 
@@ -226,3 +404,4 @@
     padding: 0 1rem;
     color: #fff;
 }
+
